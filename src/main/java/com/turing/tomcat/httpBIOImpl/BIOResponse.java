@@ -17,7 +17,7 @@ public class BIOResponse implements Response {
                 .append(defaultContentType)
                 .append(delimiter)
                 .append(content);
-        System.out.println(stringBuilder.toString());
         out.write(stringBuilder.toString().getBytes());
+        out.flush();
     }
 }
