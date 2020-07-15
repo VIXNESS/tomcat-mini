@@ -43,3 +43,15 @@ src
     ├── java
     └── resources
 ```
+
+
+## UML
+### 时序图
+![时序图](seq.svg)
+
+### 类图 
+> 以NIO实现的为例
+
+![类图](NIORequest.png)
+
+![AbstractServlet](AbstractServlet.png)

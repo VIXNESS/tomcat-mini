@@ -1,0 +1,144 @@
+<mxfile host="b38db7bb-2b87-47b9-8bc0-ad53beb1d989" modified="2020-07-15T07:59:49.313Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.1 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="iql_W-hMO0YIVI4oYF1M" version="13.1.3">
+    <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
+        <mxGraphModel dx="729" dy="466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.2" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="Socket" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="40" width="100" height="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="4" vertex="1">
+                    <mxGeometry x="45" y="190" width="10" height="500" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Tomcat" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="40" width="100" height="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="3" vertex="1">
+                    <mxGeometry x="45" y="70" width="10" height="660" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="3">
+                    <mxGeometry x="55" y="140" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="load servlet-method mapping" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=0.989;exitY=0.075;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" target="34" parent="3" source="13">
+                    <mxGeometry x="0.15" y="-20" relative="1" as="geometry">
+                        <mxPoint x="60" y="120" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="85" y="120"/>
+                            <mxPoint x="85" y="140"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="Request" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="40" width="100" height="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="5">
+                    <mxGeometry x="45" y="378" width="10" height="212" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="5">
+                    <mxGeometry x="55" y="416" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="parsing InputStream&amp;nbsp;" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;" edge="1" target="61" parent="5" source="52">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="60" y="396" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="85" y="396"/>
+                            <mxPoint x="85" y="416"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="Response" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="630" y="40" width="100" height="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="6">
+                    <mxGeometry x="45" y="390" width="10" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Servlet" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="40" width="100" height="760" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="7">
+                    <mxGeometry x="45" y="560" width="10" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" vertex="1" parent="7">
+                    <mxGeometry x="55" y="590" width="10" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="business logic" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;entryX=1;entryY=0;exitX=0.957;exitY=0.114;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" target="65" parent="7" source="64">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="60" y="570" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="85" y="569"/>
+                            <mxPoint x="85" y="590"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="request Socket Object" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;exitX=1.02;exitY=0.183;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="13" target="29" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="90" y="230" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="return Socket" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=0.989;entryY=0.297;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.003;exitY=0.151;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="29" edge="1" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="90" y="306" as="targetPoint"/>
+                        <mxPoint x="270" y="306" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="request I/O stream" style="html=1;verticalAlign=bottom;endArrow=block;entryX=-0.043;entryY=0.24;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.992;exitY=0.363;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="13" target="29">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="90" y="350" as="sourcePoint"/>
+                        <mxPoint x="210" y="350" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" value="return I/O stream" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=0.026;exitY=0.341;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="29" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="270" y="400" as="sourcePoint"/>
+                        <mxPoint x="90" y="401" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="return Request Object" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;exitX=-0.043;exitY=0.361;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="52" target="13">
+                    <mxGeometry x="-0.3684" y="-6" relative="1" as="geometry">
+                        <mxPoint x="470" y="496" as="sourcePoint"/>
+                        <mxPoint x="100" y="495" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="set OutputStream and get Response" style="html=1;verticalAlign=bottom;endArrow=block;entryX=-0.043;entryY=0.437;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="53">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="120" y="550" as="sourcePoint"/>
+                        <mxPoint x="610" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="return Response Object" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;entryX=1.044;entryY=0.701;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="53" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="610" y="570" as="sourcePoint"/>
+                        <mxPoint x="100" y="570" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" value="set Request &amp;amp; Response to Servlet" style="html=1;verticalAlign=bottom;endArrow=block;exitX=1.14;exitY=0.756;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.019;entryY=0.108;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="13" target="64">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="130" y="610" as="sourcePoint"/>
+                        <mxPoint x="870" y="609" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="write result" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" target="53">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="880" y="680" as="sourcePoint"/>
+                        <mxPoint x="690" y="680" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="70" value="send OutputStream to Socket" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="674" y="700" as="sourcePoint"/>
+                        <mxPoint x="285" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="set InputStream and get Request" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0.957;exitY=0.486;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="13" target="52">
+                    <mxGeometry x="0.519" width="80" relative="1" as="geometry">
+                        <mxPoint x="90" y="430" as="sourcePoint"/>
+                        <mxPoint x="470" y="431" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
