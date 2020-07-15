@@ -1,6 +1,6 @@
 package com.turing.servletImpl;
 
-import com.turing.tomcat.httpBIOImpl.AbstractServlet;
+import com.turing.tomcat.httpInterface.AbstractServlet;
 import com.turing.tomcat.httpInterface.Request;
 import com.turing.tomcat.httpInterface.Response;
 import org.apache.logging.log4j.LogManager;

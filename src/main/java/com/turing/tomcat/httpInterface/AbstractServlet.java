@@ -1,8 +1,5 @@
-package com.turing.tomcat.httpBIOImpl;
+package com.turing.tomcat.httpInterface;
 
-import com.turing.tomcat.httpInterface.Request;
-import com.turing.tomcat.httpInterface.Response;
-import com.turing.tomcat.httpInterface.Servlet;
 
 public abstract class AbstractServlet implements Servlet {
     public void service(Request request, Response response) throws Exception{

@@ -12,12 +12,15 @@ public class BIOResponse implements Response {
 
     @Override
     public void write(String content) throws Exception {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(defaultHTTPHeader)
-                .append(defaultContentType)
-                .append(delimiter)
-                .append(content);
-        out.write(stringBuilder.toString().getBytes());
-        out.flush();
+        try {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.append(defaultHTTPHeader)
+                    .append(defaultContentType)
+                    .append(delimiter)
+                    .append(content);
+            out.write(stringBuilder.toString().getBytes());
+        }finally {
+            out.flush();
+        }
     }
 }
