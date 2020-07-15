@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.FileInputStream;
 
+import java.io.InputStream;
 import java.util.Map;
 import java.util.Properties;
 
@@ -47,7 +48,8 @@ public class NIOTomcat implements Tomcat  {
 
     private void init(){
         final String WEB_INF = this.getClass().getResource("/").getPath();
-        try(FileInputStream fileInputStream = new FileInputStream(WEB_INF + "web.properties")){
+
+        try(FileInputStream fileInputStream = new FileInputStream( WEB_INF + "web.properties")){
            webProperties.load(fileInputStream);
            webProperties.keySet().stream()
                    .map(Object::toString)
@@ -69,6 +71,7 @@ public class NIOTomcat implements Tomcat  {
             e.printStackTrace();
         }
     }
+
     @Override
     public void start() {
         init();

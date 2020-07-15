@@ -17,3 +17,11 @@ dependencies {
     // https://mvnrepository.com/artifact/io.netty/netty-all
     compile group: 'io.netty', name: 'netty-all', version: '4.1.51.Final'
 }
+
+
+sourceSets {
+    main {
+        output.resourcesDir("build/classes/java/main")
+    }
+}
+
