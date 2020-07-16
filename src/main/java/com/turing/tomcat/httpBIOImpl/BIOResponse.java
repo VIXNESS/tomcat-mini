@@ -1,10 +1,11 @@
 package com.turing.tomcat.httpBIOImpl;
 
-import com.turing.tomcat.httpInterface.Response;
+import com.turing.tomcat.httpInterface.AbstractResponse;
+
 
 import java.io.OutputStream;
 
-public class BIOResponse implements Response {
+public class BIOResponse extends AbstractResponse {
     protected OutputStream out;
     public BIOResponse(OutputStream out){
         this.out = out;
@@ -13,12 +14,7 @@ public class BIOResponse implements Response {
     @Override
     public void write(String content) throws Exception {
         try {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append(defaultHTTPHeader)
-                    .append(defaultContentType)
-                    .append(delimiter)
-                    .append(content);
-            out.write(stringBuilder.toString().getBytes());
+            out.write(this.makeHttpResponse(content).getBytes());
         }finally {
             out.flush();
         }

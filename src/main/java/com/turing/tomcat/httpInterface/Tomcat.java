@@ -1,6 +1,6 @@
 package com.turing.tomcat.httpInterface;
 
 public interface Tomcat {
-     void start();
+     void start() throws Exception;
      int defaultPort = 8080;
 }
