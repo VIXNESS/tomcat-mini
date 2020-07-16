@@ -14,6 +14,7 @@ import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.nio.charset.Charset;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -47,22 +48,13 @@ public class AIOTomcat extends AbstractTomcat implements AutoCloseable {
                 StringBuilder requestBuilder = new StringBuilder();
                 byteBuffer.clear();
                 try {
-                    channel.read(byteBuffer, requestBuilder, new CompletionHandler<Integer, StringBuilder>() {
-                        @Override
-                        public void completed(Integer result, StringBuilder attachment) {
-                            if (result < 0) return;
-                            byteBuffer.flip();
-                            attachment.append(Charset.defaultCharset().decode(byteBuffer));
-                            byteBuffer.clear();
-                            channel.read(byteBuffer, attachment, this);
-                        }
-
-                        @Override
-                        public void failed(Throwable exc, StringBuilder attachment) {
-
-                        }
-                    });
-                    logger.debug(requestBuilder.toString());
+                    while (channel.read(byteBuffer).get() > 0){
+                        byteBuffer.flip();
+                        requestBuilder.append(Charset.defaultCharset().decode(byteBuffer));
+                        byteBuffer.clear();
+                        if(requestBuilder.toString().endsWith("")) break;
+                    }
+//                    logger.debug(requestBuilder.toString());
                     final Request request = new AIORequest(requestBuilder.toString());
                     final Response response = new AIOResponse(channel);
                     final String url = request.getUrl();
